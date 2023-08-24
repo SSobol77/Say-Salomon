@@ -1,11 +1,4 @@
-'''
-Text To Speech
-Text To Speech Async
-Speech To Text Async
-Automatic Translation
-Generation
-Spell Check
-'''
+# Say-Salomon
 
 import json
 import requests
