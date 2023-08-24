@@ -16,7 +16,7 @@ async fn text_to_speech(text: &str) -> Result<String, reqwest::Error> {
     let response = client
         .post(url)
         .json(&payload)
-        .header(AUTHORIZATION, "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjkzNDQyMDUtOGY1ZC00YzcyLTg5NjctYTE4Mjc5Njc4ODRlIiwidHlwZSI6ImFwaV90b2tlbiJ9.9XRl_reCsr398oL0bA2_BnoS6AA98la7QV8lrh5k25o")
+        .header(AUTHORIZATION, "Bearer 🔑 Your_API_Key")
         .send()
         .await?;
 
@@ -38,7 +38,7 @@ async fn text_to_speech_async(text: &str) -> Result<serde_json::Value, reqwest::
     let response = client
         .post(url)
         .json(&payload)
-        .header(AUTHORIZATION, "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjkzNDQyMDUtOGY1ZC00YzcyLTg5NjctYTE4Mjc5Njc4ODRlIiwidHlwZSI6ImFwaV90b2tlbiJ9.9XRl_reCsr398oL0bA2_BnoS6AA98la7QV8lrh5k25o")
+        .header(AUTHORIZATION, "Bearer 🔑 Your_API_Key")
         .send()
         .await?;
 
