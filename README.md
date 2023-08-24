@@ -1,21 +1,30 @@
-# Say-Salomon
+# Say-Salomon for Eden AI
 ## Integration of Eden AI code for C++, Java, Python, Javascript, Ruby, Ruby in one file.
 
-Asynchronous text-to-speech conversion, asynchronous speech-to-text conversion, automatic translation Eden AI
+**What does the code do:**
+* Text To Speech
+* Text To Speech Async
+* Speech To Text Async
+* Automatic Translation
+* Generation
+* Spell Check
 
 
 Eden AI provides code integration for asynchronous text-to-speech conversion, asynchronous speech-to-text conversion, and automatic translation. 
 
-To use these features, you previously had to do the following:
+&nbsp;
 
-**Install the Eden AI Library:** Before starting the integration, make sure you have the Eden AI library installed. You can do this using a package manager like pip:
+To use these functions, previously you had to perform the following steps in the case of Python:
+
+**Install the Eden AI Library:** Before starting the integration, make sure you have the Eden AI library installed. 
+
+You can do this using a package manager like pip:
 
 ``$ pip install edenai``
 
 **Import the Library in Your Code:**
 For asynchronous text-to-speech conversion:
 
-*python:*
 ```
 import edenai
 
@@ -40,6 +49,7 @@ client = edenai.SpeechToText(api_key=api_key)
 response = client.speech_to_text(audio_url='URL_of_your_audio')
 text = response['text']
 ```
+
 **For automatic translation:**
 ```
 import edenai
@@ -52,6 +62,8 @@ client = edenai.Translation(api_key=api_key)
 response = client.translate(text='Hello, world!', target_lang='ru')
 translated_text = response['translated_text']
 ```
+&nbsp;
+
 **I suggest making it easier by integrating one of my files into your code:**
 
 * **С++** - file ``say.cpp``
