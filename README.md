@@ -28,8 +28,8 @@ For asynchronous text-to-speech conversion:
 ```
 import edenai
 
-# Replace 'YOUR_API_KEY' with your Eden AI API key
-api_key = 'YOUR_API_KEY'
+# Replace '🔑 Your_API_Key' with your Eden AI API key
+api_key = '🔑 Your_API_Key'
 client = edenai.TextToSpeech(api_key=api_key)
 
 # Input text and retrieve audio
@@ -41,8 +41,8 @@ audio_url = response['audio_url']
 ```
 import edenai
 
-# Replace 'YOUR_API_KEY' with your Eden AI API key
-api_key = 'YOUR_API_KEY'
+# Replace '🔑 Your_API_Key' with your Eden AI API key
+api_key = '🔑 Your_API_Key'
 client = edenai.SpeechToText(api_key=api_key)
 
 # Input audio and retrieve text
@@ -54,8 +54,8 @@ text = response['text']
 ```
 import edenai
 
-# Replace 'YOUR_API_KEY' with your Eden AI API key
-api_key = 'YOUR_API_KEY'
+# Replace '🔑 Your_API_Key' with your Eden AI API key
+api_key = '🔑 Your_API_Key'
 client = edenai.Translation(api_key=api_key)
 
 # Translate text to another language
@@ -80,7 +80,7 @@ translated_text = response['translated_text']
 
 
 
-Please note that in the code above, you should replace 'YOUR_API_KEY' with your own Eden AI API key. After making the respective requests, you will receive results in JSON format from which you can extract the required data.
+Please note that in the code above, you should replace '🔑 Your_API_Key' with your own Eden AI API key. After making the respective requests, you will receive results in JSON format from which you can extract the required data.
 
 Remember to handle possible errors and exceptions when making requests to the Eden AI API.
 
