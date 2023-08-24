@@ -10,8 +10,6 @@
 * Spell Check
 
 
-Eden AI provides code integration for asynchronous text-to-speech conversion, asynchronous speech-to-text conversion, and automatic translation. 
-
 &nbsp;
 
 To use these functions, previously you had to perform the following steps in the case of Python:
