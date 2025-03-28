@@ -1,0 +1,6 @@
+const say = require('../src/say.js');
+
+test('text to speech returns audio url', async () => {
+    const result = await say.text_to_speech("test");
+    expect(typeof result).toBe("string");
+});
