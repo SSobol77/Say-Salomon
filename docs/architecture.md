@@ -1,4 +1,4 @@
-# 📐 Say-Salomon-AI Architecture Overview
+# 🌊 Say-Salomon-AI Architecture Overview
 
 ## 🌍 Purpose
 
