@@ -1,5 +1,7 @@
 # 🌊 Say-Salomon-AI Architecture Overview
 
+<br>
+
 ## 🌍 Purpose
 
 Say-Salomon is a multi-language integration layer for [Eden AI](https://www.edenai.co/), designed to provide developers with an easy, unified way to use AI services such as:
