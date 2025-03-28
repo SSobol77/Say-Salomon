@@ -15,7 +15,11 @@ Say-Salomon is a multi-language integration layer for [Eden AI](https://www.eden
 The system supports multiple languages including:
 - Python, Java, JavaScript, Ruby, Rust, C++, Julia, Dart
 
+<br>
+
 ---
+
+<br>
 
 ## 📁 Project Structure
 
@@ -29,8 +33,11 @@ Say-Salomon-AI/
 ├── .github/workflows/  # CI/CD config
 └── docs/               # Architecture and documentation
 ```
+<br>
 
 ---
+
+<br>
 
 ## 🧠 Core Concept
 
@@ -62,7 +69,11 @@ All language wrappers access the following Eden AI endpoints:
 
 All responses are expected in `application/json`.
 
+<br>
+
 ---
+
+<br>
 
 ## 🧪 Testing & CI
 
@@ -73,7 +84,11 @@ CI supports:
 - 🧪 Language version pinning
 - 🧪 Parallel test execution
 
+<br>
+
 ---
+
+<br>
 
 ## 🔐 Security Note
 
@@ -85,7 +100,11 @@ with your personal Eden AI API key. Ensure this key is:
 - Never committed to version control
 - Stored securely in CI secrets for testing
 
+<br>
+
 ---
+
+<br>
 
 ## 📦 Future Extensions
 
@@ -96,6 +115,8 @@ Planned enhancements:
 - 🌐 Web interface / Flutter plugin
 
 ---
+
+<br>
 
 ## 👤 Author
 
