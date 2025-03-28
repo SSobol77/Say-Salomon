@@ -1,88 +1,136 @@
-# Say-Salomon for Eden AI
-## Integration of Eden AI code for C++, Java, Python, Javascript, Ruby, Ruby in one file.
+# 🌊 Say-Salomon for Eden AI
 
-**What does the code do:**
-* Text To Speech
-* Text To Speech Async
-* Speech To Text Async
-* Automatic Translation
-* Generation
-* Spell Check
+<br>
 
+**Say-Salomon** is a cross-language integration layer for [Eden AI](https://www.edenai.co/), enabling powerful AI features in applications written in **Python, Java, C++, JavaScript, Ruby, Rust, Julia, and Dart (Flutter)**.
 
-&nbsp;
+> 🎯 Goal: Simplify Eden AI usage to a single line of code — in any language.
 
-To use these functions, previously you had to perform the following steps in the case of Python:
+---
 
-**Install the Eden AI Library:** Before starting the integration, make sure you have the Eden AI library installed. 
+<br>
 
-You can do this using a package manager like pip:
+## 🧠 Features
 
-``$ pip install edenai``
+- 🗣️ Text To Speech  
+- ⏱️ Text To Speech Async  
+- 🎧 Speech To Text Async  
+- 🌍 Automatic Translation  
+- ✍️ Text Generation  
+- ✅ Spell Check  
 
-**Import the Library in Your Code:**
-For asynchronous text-to-speech conversion:
+---
+
+<br>
+
+## 📁 Project Structure
 
 ```
-import edenai
-
-# Replace '🔑 Your_API_Key' with your Eden AI API key
-api_key = '🔑 Your_API_Key'
-client = edenai.TextToSpeech(api_key=api_key)
-
-# Input text and retrieve audio
-response = client.text_to_speech(text='Hello, world!')
-audio_url = response['audio_url']
+Say-Salomon-AI/
+├── src/          # Language-specific wrappers
+├── examples/     # Code examples
+├── tests/        # Unit tests
+├── docs/         # Architecture documentation
+├── .github/      # CI/CD with GitHub Actions
+├── README.md
+└── LICENSE
 ```
 
-**For asynchronous speech-to-text conversion:**
+---
+
+<br>
+
+## 💻 Supported Languages
+
+| Language    | File         | Status       |
+|-------------|--------------|--------------|
+| Python      | `say.py`     | ✅ Complete   |
+| Java        | `say.java`   | ✅ Complete   |
+| C++         | `say.cpp`    | ✅ Complete   |
+| JavaScript  | `say.js`     | ✅ Complete   |
+| Ruby        | `say.ruby`   | ✅ Complete   |
+| Rust        | `say.rs`     | ✅ Complete   |
+| Julia       | `say.jl`     | ✅ New        |
+| Dart        | `say.dart`   | ✅ New        |
+
+---
+
+## 🔥 Quick Start
+
+### Python
+
+```bash
+pip install requests
+python examples/example.py
 ```
-import edenai
 
-# Replace '🔑 Your_API_Key' with your Eden AI API key
-api_key = '🔑 Your_API_Key'
-client = edenai.SpeechToText(api_key=api_key)
+### Dart (Flutter/FlutterFlow)
 
-# Input audio and retrieve text
-response = client.speech_to_text(audio_url='URL_of_your_audio')
-text = response['text']
+```bash
+dart pub add http
+dart run examples/example.dart
 ```
 
-**For automatic translation:**
+### Julia
+
+```bash
+julia examples/example.jl
 ```
-import edenai
 
-# Replace '🔑 Your_API_Key' with your Eden AI API key
-api_key = '🔑 Your_API_Key'
-client = edenai.Translation(api_key=api_key)
+---
 
-# Translate text to another language
-response = client.translate(text='Hello, world!', target_lang='ru')
-translated_text = response['translated_text']
+## 🌐 Example (Dart)
+
+```dart
+final say = SaySalomon('🔑 Your_API_Key');
+final audio = await say.textToSpeech("Hello world");
+print("Audio URL: $audio");
 ```
-&nbsp;
 
-**I suggest making it easier by integrating one of my files into your code:**
+---
 
-* **С++** - file ``say.cpp``
+## 🔄 Eden AI API Integration
 
-* **Java** - file ``say.java``
+Say-Salomon wraps the following endpoints:
 
-* **JavaScript** - file ``say.js``
+- `/v2/audio/text_to_speech`
+- `/v2/audio/text_to_speech_async`
+- `/v2/audio/speech_to_text_async`
+- `/v2/translation/automatic_translation`
+- `/v2/text/generation`
+- `/v2/text/spell_check`
 
-* **Python** - file ``say.py``
+All responses are in JSON format.
 
-* **Rust** - file ``say.rs``
+---
 
-* **Ruby** - file ``say.ruby``
+## 🧪 Testing
 
+- Each language has its own test in `tests/`
+- CI/CD is managed via GitHub Actions
+- See [`test.yml`](.github/workflows/test.yml)
 
+---
 
-Please note that in the code above, you should replace '🔑 Your_API_Key' with your own Eden AI API key. After making the respective requests, you will receive results in JSON format from which you can extract the required data.
+## 🛡 Security
 
-Remember to handle possible errors and exceptions when making requests to the Eden AI API.
+Remember to replace `🔑 Your_API_Key` with your real API key. Never commit your key to public repositories.
 
+---
 
+## 📄 License
 
+This project is licensed under **GPL-3.0**  
+📜 See [LICENSE](LICENSE)
 
+---
 
+## 👤 Author
+
+**Siergej Sobolewski**  
+📧 [s.sobolewski@hotmail.com](mailto:s.sobolewski@hotmail.com)  
+🔗 [GitHub: SSobol77](https://github.com/SSobol77/Say-Salomon-AI)
+
+---
+
+> Say-Salomon — a universal bridge between your code and artificial intelligence.
