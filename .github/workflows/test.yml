@@ -1,0 +1,107 @@
+name: SaySalomon CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  python-tests:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    - name: Install dependencies
+      run: pip install requests
+    - name: Run Python tests
+      run: python tests/test_say_py.py
+
+  java-tests:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Java
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: '21'
+    - name: Compile and test Java
+      run: |
+        javac -cp .:src tests/TestSayJava.java
+        java -cp .:src org.junit.platform.console.ConsoleLauncher --select-class TestSayJava
+
+  javascript-tests:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
+    - name: Install dependencies
+      run: npm install node-fetch
+    - name: Run JavaScript tests
+      run: node tests/test_say_js.test.js
+
+  rust-tests:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Rust
+      uses: actions-rs/toolchain@v1
+      with:
+        toolchain: stable
+    - name: Run Rust tests
+      run: cargo test
+
+  cpp-tests:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Install dependencies
+      run: sudo apt-get install libcurl4-openssl-dev libjsoncpp-dev g++
+    - name: Compile and run C++ test
+      run: |
+        g++ tests/test_say.cpp -o cpp_test -lcurl -ljsoncpp
+        ./cpp_test
+
+  ruby-tests:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.1'
+    - name: Install dependencies
+      run: gem install minitest
+    - name: Run Ruby tests
+      run: ruby tests/test_say.rb
+
+  julia-tests:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Julia
+      uses: julia-actions/setup-julia@v1
+      with:
+        version: '1.10'
+    - name: Run Julia tests
+      run: julia tests/test_say.jl
+
+  dart-tests:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Dart
+      uses: dart-lang/setup-dart@v1
+      with:
+        sdk: 'stable'
+    - name: Install dependencies
+      run: dart pub get
+    - name: Run Dart tests
+      run: dart test tests/test_say.dart
